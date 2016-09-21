@@ -9,25 +9,46 @@
 /* Begin PBXBuildFile section */
 		30BE72451D8EEF84000E758A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE72441D8EEF84000E758A /* main.m */; };
 		30BE72481D8EEF84000E758A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE72471D8EEF84000E758A /* AppDelegate.m */; };
-		30BE724B1D8EEF84000E758A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE724A1D8EEF84000E758A /* ViewController.m */; };
 		30BE724E1D8EEF84000E758A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE724C1D8EEF84000E758A /* Main.storyboard */; };
 		30BE72501D8EEF84000E758A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30BE724F1D8EEF84000E758A /* Assets.xcassets */; };
 		30BE72531D8EEF84000E758A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE72511D8EEF84000E758A /* LaunchScreen.storyboard */; };
-		42928901F7F31A3F2CB5BCDD /* Pods_MvvmAndRac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B083AEC59E3B6A523BAD6C /* Pods_MvvmAndRac.framework */; };
+		636AF5991D8FADBF003A558C /* CYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636AF5981D8FADBF003A558C /* CYViewController.m */; };
+		636AF5A11D8FB05A003A558C /* CYViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636AF5A01D8FB05A003A558C /* CYViewModel.m */; };
+		636CEB621D9235100045CCCE /* CYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CEB611D9235100045CCCE /* CYModel.m */; };
+		636CEB651D9237120045CCCE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CEB641D9237120045CCCE /* Person.m */; };
+		636CEB681D9238620045CCCE /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CEB671D9238620045CCCE /* PersonController.m */; };
+		636CEB6B1D9238B20045CCCE /* PersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CEB6A1D9238B20045CCCE /* PersonViewModel.m */; };
+		636E7DFA1D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png in Resources */ = {isa = PBXBuildFile; fileRef = 636E7DF91D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png */; };
+		D231604D8A09BE1426A59D29 /* libPods-MvvmAndRac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E98AD920D509E7BC6D3F7B8 /* libPods-MvvmAndRac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E98AD920D509E7BC6D3F7B8 /* libPods-MvvmAndRac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MvvmAndRac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BE72401D8EEF84000E758A /* MvvmAndRac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmAndRac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BE72441D8EEF84000E758A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30BE72461D8EEF84000E758A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		30BE72471D8EEF84000E758A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		30BE72491D8EEF84000E758A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		30BE724A1D8EEF84000E758A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		30BE724D1D8EEF84000E758A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30BE724F1D8EEF84000E758A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30BE72521D8EEF84000E758A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30BE72541D8EEF84000E758A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3B083AEC59E3B6A523BAD6C /* Pods_MvvmAndRac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmAndRac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		636AF5941D8FA46A003A558C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		636AF5971D8FADBF003A558C /* CYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYViewController.h; sourceTree = "<group>"; };
+		636AF5981D8FADBF003A558C /* CYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYViewController.m; sourceTree = "<group>"; };
+		636AF59A1D8FAE5B003A558C /* CYViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYViewControllerProtocol.h; sourceTree = "<group>"; };
+		636AF59F1D8FB05A003A558C /* CYViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYViewModel.h; sourceTree = "<group>"; };
+		636AF5A01D8FB05A003A558C /* CYViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYViewModel.m; sourceTree = "<group>"; };
+		636AF5A21D8FB0A8003A558C /* CYViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYViewModelProtocol.h; sourceTree = "<group>"; };
+		636CEB601D9235100045CCCE /* CYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYModel.h; sourceTree = "<group>"; };
+		636CEB611D9235100045CCCE /* CYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYModel.m; sourceTree = "<group>"; };
+		636CEB631D9237120045CCCE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		636CEB641D9237120045CCCE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		636CEB661D9238620045CCCE /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = "<group>"; };
+		636CEB671D9238620045CCCE /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = "<group>"; };
+		636CEB691D9238B20045CCCE /* PersonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewModel.h; sourceTree = "<group>"; };
+		636CEB6A1D9238B20045CCCE /* PersonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewModel.m; sourceTree = "<group>"; };
+		636E7DF81D9267E100A21DCB /* CYModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYModelProtocol.h; sourceTree = "<group>"; };
+		636E7DF91D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "870541-9980f27c0ceaa4d2.png"; sourceTree = "<group>"; };
 		CCB467555DE44D27965D3AA2 /* Pods-MvvmAndRac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmAndRac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmAndRac/Pods-MvvmAndRac.debug.xcconfig"; sourceTree = "<group>"; };
 		F0820F7A52565ED9B382A207 /* Pods-MvvmAndRac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmAndRac.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmAndRac/Pods-MvvmAndRac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42928901F7F31A3F2CB5BCDD /* Pods_MvvmAndRac.framework in Frameworks */,
+				D231604D8A09BE1426A59D29 /* libPods-MvvmAndRac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +68,7 @@
 		0E439537D5664E60BA2E9060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3B083AEC59E3B6A523BAD6C /* Pods_MvvmAndRac.framework */,
+				2E98AD920D509E7BC6D3F7B8 /* libPods-MvvmAndRac.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,8 +85,8 @@
 		30453E801D8EF62C0016302D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				30BE72491D8EEF84000E758A /* ViewController.h */,
-				30BE724A1D8EEF84000E758A /* ViewController.m */,
+				636CEB5F1D9229130045CCCE /* Demo */,
+				636AF5951D8FAD75003A558C /* General */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -91,6 +112,7 @@
 		30BE72371D8EEF84000E758A = {
 			isa = PBXGroup;
 			children = (
+				636E7DF91D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png */,
 				30BE72421D8EEF84000E758A /* MvvmAndRac */,
 				30BE72411D8EEF84000E758A /* Products */,
 				4E114DF2915D0FD794B37776 /* Pods */,
@@ -122,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				30BE72441D8EEF84000E758A /* main.m */,
+				636AF5941D8FA46A003A558C /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,6 +156,67 @@
 				F0820F7A52565ED9B382A207 /* Pods-MvvmAndRac.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		636AF5951D8FAD75003A558C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				636AF5961D8FAD80003A558C /* Base(基类) */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		636AF5961D8FAD80003A558C /* Base(基类) */ = {
+			isa = PBXGroup;
+			children = (
+				636AF5971D8FADBF003A558C /* CYViewController.h */,
+				636AF5981D8FADBF003A558C /* CYViewController.m */,
+				636AF59A1D8FAE5B003A558C /* CYViewControllerProtocol.h */,
+				636AF59F1D8FB05A003A558C /* CYViewModel.h */,
+				636AF5A01D8FB05A003A558C /* CYViewModel.m */,
+				636AF5A21D8FB0A8003A558C /* CYViewModelProtocol.h */,
+				636CEB601D9235100045CCCE /* CYModel.h */,
+				636CEB611D9235100045CCCE /* CYModel.m */,
+				636E7DF81D9267E100A21DCB /* CYModelProtocol.h */,
+			);
+			name = "Base(基类)";
+			sourceTree = "<group>";
+		};
+		636CEB5F1D9229130045CCCE /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				636E7DEE1D92537000A21DCB /* view */,
+				636E7DEF1D92537D00A21DCB /* viewmodel */,
+				636E7DED1D92536500A21DCB /* model */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		636E7DED1D92536500A21DCB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				636CEB631D9237120045CCCE /* Person.h */,
+				636CEB641D9237120045CCCE /* Person.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		636E7DEE1D92537000A21DCB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				636CEB661D9238620045CCCE /* PersonController.h */,
+				636CEB671D9238620045CCCE /* PersonController.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		636E7DEF1D92537D00A21DCB /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				636CEB691D9238B20045CCCE /* PersonViewModel.h */,
+				636CEB6A1D9238B20045CCCE /* PersonViewModel.m */,
+			);
+			name = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636E7DFA1D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png in Resources */,
 				30BE72531D8EEF84000E758A /* LaunchScreen.storyboard in Resources */,
 				30BE72501D8EEF84000E758A /* Assets.xcassets in Resources */,
 				30BE724E1D8EEF84000E758A /* Main.storyboard in Resources */,
@@ -256,9 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30BE724B1D8EEF84000E758A /* ViewController.m in Sources */,
+				636CEB681D9238620045CCCE /* PersonController.m in Sources */,
 				30BE72481D8EEF84000E758A /* AppDelegate.m in Sources */,
 				30BE72451D8EEF84000E758A /* main.m in Sources */,
+				636CEB651D9237120045CCCE /* Person.m in Sources */,
+				636CEB6B1D9238B20045CCCE /* PersonViewModel.m in Sources */,
+				636AF5991D8FADBF003A558C /* CYViewController.m in Sources */,
+				636AF5A11D8FB05A003A558C /* CYViewModel.m in Sources */,
+				636CEB621D9235100045CCCE /* CYModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +459,9 @@
 			baseConfigurationReference = CCB467555DE44D27965D3AA2 /* Pods-MvvmAndRac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MvvmAndRac/PrefixHeader.pch";
 				INFOPLIST_FILE = MvvmAndRac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.qcy.MvvmAndRac;
@@ -381,6 +474,9 @@
 			baseConfigurationReference = F0820F7A52565ED9B382A207 /* Pods-MvvmAndRac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MvvmAndRac/PrefixHeader.pch";
 				INFOPLIST_FILE = MvvmAndRac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.qcy.MvvmAndRac;
