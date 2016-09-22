@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "OtherDelegate.h"
+
 @interface AppDelegate ()
 
 @end

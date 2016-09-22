@@ -7,7 +7,7 @@
 //
 
 /**
- 此部分代码只负责原始数据的获取
+ 此部分代码只负责原始数据的获取，不能引入任何组件
  */
 
 #import "CYModel.h"
@@ -28,7 +28,7 @@
 
 @property(strong, nonatomic) NSData *skill;
 
-@property(assign, nonatomic) id<CYModelProtocol> modelProtocol;
+@property(strong, nonatomic) RACSubject *onGetNewData;//数据跟新的信号📶,可以有多个信号📶，指向不同的事件处理结果
 
 -(void)updateData;
 

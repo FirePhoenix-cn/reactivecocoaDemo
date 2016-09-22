@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CYViewControllerProtocol.h"
 
-@interface CYViewController : UIViewController<CYViewControllerProtocol>
+@interface CYViewController : UIViewController
 
 @end

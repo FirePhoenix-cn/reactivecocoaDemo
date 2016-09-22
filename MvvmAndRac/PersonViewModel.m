@@ -9,7 +9,7 @@
 #import "PersonViewModel.h"
 #import "Person.h"
 
-@interface PersonViewModel()<CYModelProtocol>
+@interface PersonViewModel()
 
 @property(strong, nonatomic) Person *person;
 
@@ -17,6 +17,9 @@
 
 @implementation PersonViewModel
 
+/**************************************************************
+                           公共方法
+ **************************************************************/
 -(instancetype)initViewModel
 {
     self = [self init];
@@ -24,44 +27,64 @@
     {
         return nil;
     }
-    Person *person = [[Person alloc] init];
-    _person = person;
-    _person.modelProtocol = self;
-    _viewmodelProtocol = self;
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    _name = [NSString stringWithFormat:@"name:%@",_person.name];
-    _age = [NSString stringWithFormat:@"age:%li",(long)_person.age];
-    _birthdate = [NSString stringWithFormat:@"birth:%@",[formatter stringFromDate:_person.birthdate]];
-    _sex = (_person.ismale)?@"sex:man":@"sex:woman";
-    _height = [NSString stringWithFormat:@"height:%.1f M",_person.height];
-    _weight = [NSString stringWithFormat:@"weight:%.1f M",_person.weight];
-    _skill = [NSString stringWithFormat:@"skill:%@",_person.skill];
-    return self;
-}
-
--(void)analysisData
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    _name = [NSString stringWithFormat:@"name:%@",_person.name];
-    _age = [NSString stringWithFormat:@"age:%li",(long)_person.age];
-    _birthdate = [NSString stringWithFormat:@"birth:%@",[formatter stringFromDate:_person.birthdate]];
-    _sex = (_person.ismale)?@"sex:man":@"sex:woman";
-    _height = [NSString stringWithFormat:@"height:%.1f M",_person.height];
-    _weight = [NSString stringWithFormat:@"weight:%.1f M",_person.weight];
-    _skill = [NSString stringWithFormat:@"skill:%@",_person.skill];
-}
-
--(void)httpDidUpdateData:(id)data
-{
-    _person = data;
     [self analysisData];
+    
+    //订阅MODEL的信号🆕，也可以使用KVO
+    @weakify(self)
+    [self.person.onGetNewData subscribeNext:^(id x) {
+        @strongify(self)
+        [self analysisData];
+    }];
+    return self;
 }
 
 -(void)updateDataWithUrl:(NSString*)url
 {
-    [_person updateData];
+    [self.person updateData];
 }
+
+
+/**************************************************************
+                             懒加载
+ **************************************************************/
+-(Person *)person
+{
+    if (!_person) {
+        _person = [[Person alloc] init];
+    }
+    return _person;
+}
+
+-(RACSubject *)didUpdateData
+{
+    if (!_didUpdateData)
+    {
+        _didUpdateData = [[RACSubject alloc] init];
+    }
+    return _didUpdateData;
+}
+
+/**************************************************************
+                            私有方法
+ **************************************************************/
+-(void)analysisData
+{
+    __weak Person *person = self.person;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yy-MM-dd HH:mm:ss"];
+    self.name = [NSString stringWithFormat:@"name:%@",person.name];
+    self.age = [NSString stringWithFormat:@"age:%li",(long)person.age];
+    self.birthdate = [NSString stringWithFormat:@"birth:%@",[formatter stringFromDate:person.birthdate]];
+    self.sex = (person.ismale)?@"sex:man":@"sex:woman";
+    self.height = [NSString stringWithFormat:@"height:%.1f M",person.height];
+    self.weight = [NSString stringWithFormat:@"weight:%.1f M",person.weight];
+    self.skill = [NSString stringWithFormat:@"skill:%@",person.skill];
+    person = nil;
+    
+    //数据解析完成了，发出信号📶
+    [self.didUpdateData sendNext:nil];
+    
+}
+
 
 @end

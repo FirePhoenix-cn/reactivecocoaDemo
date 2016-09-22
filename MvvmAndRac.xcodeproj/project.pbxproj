@@ -19,6 +19,10 @@
 		636CEB681D9238620045CCCE /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CEB671D9238620045CCCE /* PersonController.m */; };
 		636CEB6B1D9238B20045CCCE /* PersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CEB6A1D9238B20045CCCE /* PersonViewModel.m */; };
 		636E7DFA1D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png in Resources */ = {isa = PBXBuildFile; fileRef = 636E7DF91D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png */; };
+		636EB2401D936A8000E6507F /* OtherDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EB23F1D936A8000E6507F /* OtherDelegate.m */; };
+		636EB2471D937EB400E6507F /* CYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EB2461D937EB400E6507F /* CYView.m */; };
+		636EB24D1D93821500E6507F /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EB24C1D93821500E6507F /* SubView.m */; };
+		636EB24F1D93822C00E6507F /* SubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636EB24E1D93822C00E6507F /* SubView.xib */; };
 		D231604D8A09BE1426A59D29 /* libPods-MvvmAndRac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E98AD920D509E7BC6D3F7B8 /* libPods-MvvmAndRac.a */; };
 /* End PBXBuildFile section */
 
@@ -35,10 +39,8 @@
 		636AF5941D8FA46A003A558C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		636AF5971D8FADBF003A558C /* CYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYViewController.h; sourceTree = "<group>"; };
 		636AF5981D8FADBF003A558C /* CYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYViewController.m; sourceTree = "<group>"; };
-		636AF59A1D8FAE5B003A558C /* CYViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYViewControllerProtocol.h; sourceTree = "<group>"; };
 		636AF59F1D8FB05A003A558C /* CYViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYViewModel.h; sourceTree = "<group>"; };
 		636AF5A01D8FB05A003A558C /* CYViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYViewModel.m; sourceTree = "<group>"; };
-		636AF5A21D8FB0A8003A558C /* CYViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYViewModelProtocol.h; sourceTree = "<group>"; };
 		636CEB601D9235100045CCCE /* CYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYModel.h; sourceTree = "<group>"; };
 		636CEB611D9235100045CCCE /* CYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYModel.m; sourceTree = "<group>"; };
 		636CEB631D9237120045CCCE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 		636CEB6A1D9238B20045CCCE /* PersonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewModel.m; sourceTree = "<group>"; };
 		636E7DF81D9267E100A21DCB /* CYModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYModelProtocol.h; sourceTree = "<group>"; };
 		636E7DF91D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "870541-9980f27c0ceaa4d2.png"; sourceTree = "<group>"; };
+		636EB23E1D936A8000E6507F /* OtherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherDelegate.h; sourceTree = "<group>"; };
+		636EB23F1D936A8000E6507F /* OtherDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherDelegate.m; sourceTree = "<group>"; };
+		636EB2451D937EB400E6507F /* CYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYView.h; sourceTree = "<group>"; };
+		636EB2461D937EB400E6507F /* CYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYView.m; sourceTree = "<group>"; };
+		636EB24A1D937F5700E6507F /* CYViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYViewProtocol.h; sourceTree = "<group>"; };
+		636EB24B1D93821500E6507F /* SubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubView.h; sourceTree = "<group>"; };
+		636EB24C1D93821500E6507F /* SubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubView.m; sourceTree = "<group>"; };
+		636EB24E1D93822C00E6507F /* SubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubView.xib; sourceTree = "<group>"; };
 		CCB467555DE44D27965D3AA2 /* Pods-MvvmAndRac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmAndRac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmAndRac/Pods-MvvmAndRac.debug.xcconfig"; sourceTree = "<group>"; };
 		F0820F7A52565ED9B382A207 /* Pods-MvvmAndRac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmAndRac.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmAndRac/Pods-MvvmAndRac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +88,8 @@
 			children = (
 				30BE72461D8EEF84000E758A /* AppDelegate.h */,
 				30BE72471D8EEF84000E758A /* AppDelegate.m */,
+				636EB23E1D936A8000E6507F /* OtherDelegate.h */,
+				636EB23F1D936A8000E6507F /* OtherDelegate.m */,
 			);
 			name = APPDelegate;
 			sourceTree = "<group>";
@@ -85,7 +97,8 @@
 		30453E801D8EF62C0016302D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				636CEB5F1D9229130045CCCE /* Demo */,
+				636EB2511D93B3AF00E6507F /* Demo(晋级版) */,
+				636CEB5F1D9229130045CCCE /* Demo(初级版，适合一个页面内数据格式单一的情况) */,
 				636AF5951D8FAD75003A558C /* General */,
 			);
 			name = Classes;
@@ -171,25 +184,26 @@
 			children = (
 				636AF5971D8FADBF003A558C /* CYViewController.h */,
 				636AF5981D8FADBF003A558C /* CYViewController.m */,
-				636AF59A1D8FAE5B003A558C /* CYViewControllerProtocol.h */,
 				636AF59F1D8FB05A003A558C /* CYViewModel.h */,
 				636AF5A01D8FB05A003A558C /* CYViewModel.m */,
-				636AF5A21D8FB0A8003A558C /* CYViewModelProtocol.h */,
 				636CEB601D9235100045CCCE /* CYModel.h */,
 				636CEB611D9235100045CCCE /* CYModel.m */,
 				636E7DF81D9267E100A21DCB /* CYModelProtocol.h */,
+				636EB2451D937EB400E6507F /* CYView.h */,
+				636EB2461D937EB400E6507F /* CYView.m */,
+				636EB24A1D937F5700E6507F /* CYViewProtocol.h */,
 			);
 			name = "Base(基类)";
 			sourceTree = "<group>";
 		};
-		636CEB5F1D9229130045CCCE /* Demo */ = {
+		636CEB5F1D9229130045CCCE /* Demo(初级版，适合一个页面内数据格式单一的情况) */ = {
 			isa = PBXGroup;
 			children = (
 				636E7DEE1D92537000A21DCB /* view */,
 				636E7DEF1D92537D00A21DCB /* viewmodel */,
 				636E7DED1D92536500A21DCB /* model */,
 			);
-			name = Demo;
+			name = "Demo(初级版，适合一个页面内数据格式单一的情况)";
 			sourceTree = "<group>";
 		};
 		636E7DED1D92536500A21DCB /* model */ = {
@@ -206,6 +220,9 @@
 			children = (
 				636CEB661D9238620045CCCE /* PersonController.h */,
 				636CEB671D9238620045CCCE /* PersonController.m */,
+				636EB24B1D93821500E6507F /* SubView.h */,
+				636EB24C1D93821500E6507F /* SubView.m */,
+				636EB24E1D93822C00E6507F /* SubView.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -217,6 +234,13 @@
 				636CEB6A1D9238B20045CCCE /* PersonViewModel.m */,
 			);
 			name = viewmodel;
+			sourceTree = "<group>";
+		};
+		636EB2511D93B3AF00E6507F /* Demo(晋级版) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Demo(晋级版)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +306,7 @@
 				636E7DFA1D92849D00A21DCB /* 870541-9980f27c0ceaa4d2.png in Resources */,
 				30BE72531D8EEF84000E758A /* LaunchScreen.storyboard in Resources */,
 				30BE72501D8EEF84000E758A /* Assets.xcassets in Resources */,
+				636EB24F1D93822C00E6507F /* SubView.xib in Resources */,
 				30BE724E1D8EEF84000E758A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,9 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636EB24D1D93821500E6507F /* SubView.m in Sources */,
 				636CEB681D9238620045CCCE /* PersonController.m in Sources */,
+				636EB2401D936A8000E6507F /* OtherDelegate.m in Sources */,
 				30BE72481D8EEF84000E758A /* AppDelegate.m in Sources */,
 				30BE72451D8EEF84000E758A /* main.m in Sources */,
+				636EB2471D937EB400E6507F /* CYView.m in Sources */,
 				636CEB651D9237120045CCCE /* Person.m in Sources */,
 				636CEB6B1D9238B20045CCCE /* PersonViewModel.m in Sources */,
 				636AF5991D8FADBF003A558C /* CYViewController.m in Sources */,

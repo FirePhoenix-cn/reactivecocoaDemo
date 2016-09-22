@@ -8,8 +8,9 @@
 
 #import "PersonController.h"
 #import "PersonViewModel.h"
+#import "SubView.h"
 
-@interface PersonController ()
+@interface PersonController ()<CYViewProtocol>
 
 @property (strong ,nonatomic) PersonViewModel *viewModel;
 
@@ -20,42 +21,34 @@
 @property (strong, nonatomic) IBOutlet UILabel *height;
 @property (strong, nonatomic) IBOutlet UILabel *weight;
 @property (strong, nonatomic) IBOutlet UILabel *skill;
-- (IBAction)clickbutton:(UIButton *)sender;
 
 @end
 
 @implementation PersonController
-
+/**************************************************************
+                            系统方法
+ **************************************************************/
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _viewModel = [[PersonViewModel alloc] initViewModel];
-    _name.text = _viewModel.name;
-    _age.text = _viewModel.age;
-    _sex.text = _viewModel.sex;
-    _birth.text = _viewModel.birthdate;
-    _height.text = _viewModel.height;
-    _weight.text = _viewModel.weight;
-    _skill.text = _viewModel.skill;
+    [self refreshUI];
     
-//    [_viewModel.name.rac_sequence.signal subscribeNext:^(id x) {
-//        RACTuple *tuple = (RACTuple *)x;
-//        NSLog(@"%@",tuple.allObjects);
-//        _viewModel = [tuple objectAtIndex:0];
-//        [self refreshUI];
-//    }];
+    __weak SubView *sv = [[[NSBundle mainBundle] loadNibNamed:@"SubView" owner:self options:nil] lastObject];
+    sv.delegate = self;
+    [sv setFrame:CGRectMake((self.view.bounds.size.width - sv.bounds.size.width) *0.5,
+                            self.view.bounds.size.height - sv.bounds.size.height,
+                            sv.bounds.size.width, sv.bounds.size.height)];
+    [self.view addSubview:sv];
     
-}
+    //订阅viewmodel的信号📶
+    
+    @weakify(self)
+    [self.viewModel.didUpdateData subscribeNext:^(id x) {
+        @strongify(self)
+        [self refreshUI];
 
--(void)refreshUI
-{
-    _name.text = _viewModel.name;
-    _age.text = _viewModel.age;
-    _sex.text = _viewModel.sex;
-    _birth.text = _viewModel.birthdate;
-    _height.text = _viewModel.height;
-    _weight.text = _viewModel.weight;
-    _skill.text = _viewModel.skill;
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,10 +56,42 @@
     [super didReceiveMemoryWarning];
 }
 
+/**************************************************************
+                            懒加载
+ **************************************************************/
 
-- (IBAction)clickbutton:(UIButton *)sender
+-(PersonViewModel *)viewModel
 {
-    [_viewModel updateDataWithUrl:nil];
+    if (!_viewModel) {
+        _viewModel = [[PersonViewModel alloc] initViewModel];
+    }
+    return _viewModel;
+}
+/**************************************************************
+                            私有方法
+ **************************************************************/
+
+-(void)refreshUI
+{
+    __weak PersonViewModel *model = self.viewModel;
+    self.name.text = model.name;
+    self.age.text = model.age;
+    self.sex.text = model.sex;
+    self.birth.text = model.birthdate;
+    self.height.text = model.height;
+    self.weight.text = model.weight;
+    self.skill.text = model.skill;
+    model = nil;
+}
+
+/**************************************************************
+                            代理协议
+ **************************************************************/
+
+
+-(void)clickButton:(id)sender
+{
+    [self.viewModel updateDataWithUrl:nil];
 }
 
 @end

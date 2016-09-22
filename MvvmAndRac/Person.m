@@ -10,16 +10,37 @@
 
 @implementation Person
 
+/**************************************************************
+                            公共方法
+ **************************************************************/
 
 -(void)updateData
 {
-    [self performSelector:@selector(didRecieveHttpData) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(didRecieveHttpData) withObject:nil afterDelay:1];
 }
+
+/**************************************************************
+                            私有方法
+ **************************************************************/
 
 -(void)didRecieveHttpData
 {
-    self.name = @"123";
-    [_modelProtocol httpDidUpdateData:self];
+    self.birthdate = [[NSDate alloc] init];
+    
+    //数据获取到了，发出信号📶
+    [self.onGetNewData sendNext:nil];
+}
+
+/**************************************************************
+                            懒加载
+ **************************************************************/
+
+-(RACSubject *)onGetNewData
+{
+    if (!_onGetNewData) {
+        _onGetNewData = [[RACSubject alloc] init];
+    }
+    return _onGetNewData;
 }
 
 @end
